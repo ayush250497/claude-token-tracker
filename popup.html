@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <h1>Claude Token Tracker</h1>
+
+    <div class="section">
+      <label for="model-select">Model</label>
+      <select id="model-select">
+        <option value="opus-4">Opus 4 — $15 / $75 per MTok</option>
+        <option value="sonnet-4" selected>Sonnet 4 — $3 / $15 per MTok</option>
+        <option value="haiku-3.5">Haiku 3.5 — $0.80 / $4 per MTok</option>
+      </select>
+    </div>
+
+    <div class="section pricing-info">
+      <div class="price-row">
+        <span class="price-label">Input:</span>
+        <span id="price-input">$3.00 / MTok</span>
+      </div>
+      <div class="price-row">
+        <span class="price-label">Output:</span>
+        <span id="price-output">$15.00 / MTok</span>
+      </div>
+    </div>
+
+    <div class="footer">
+      Select the model you're using on claude.ai<br>
+      so the cost estimates are accurate.
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

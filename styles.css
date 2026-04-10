@@ -1,0 +1,123 @@
+/*
+ * styles.css
+ * Floating widget styles for the Claude Token Tracker.
+ */
+
+#ctt-widget {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 220px;
+  background: #1a1a2e;
+  border: 1px solid #2d2d44;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  font-family: "SF Mono", "Fira Code", "Cascadia Code", "Consolas", monospace;
+  font-size: 12px;
+  color: #e0e0e0;
+  z-index: 2147483647;
+  overflow: hidden;
+  user-select: none;
+  transition: opacity 0.2s;
+  opacity: 0.92;
+}
+
+#ctt-widget:hover { opacity: 1; }
+
+#ctt-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  background: #16213e;
+  cursor: grab;
+  border-bottom: 1px solid #2d2d44;
+}
+
+#ctt-title {
+  font-weight: 600;
+  font-size: 11px;
+  color: #c4b5fd;
+  letter-spacing: 0.3px;
+  flex-shrink: 0;
+}
+
+#ctt-model-badge {
+  font-size: 10px;
+  background: #7c3aed;
+  color: #fff;
+  padding: 1px 6px;
+  border-radius: 8px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+#ctt-toggle {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0 2px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+#ctt-toggle:hover { color: #c4b5fd; }
+
+#ctt-body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#ctt-body.ctt-hidden { display: none; }
+
+.ctt-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #888;
+  letter-spacing: 0.5px;
+  margin-bottom: 3px;
+  font-weight: 600;
+}
+
+.ctt-row {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.ctt-unit { color: #666; font-size: 10px; }
+
+.ctt-cost { margin-left: auto; color: #34d399; font-weight: 600; }
+
+.ctt-session-label { color: #888; min-width: 30px; font-size: 11px; }
+
+#ctt-divider { border-top: 1px solid #2d2d44; margin: 2px 0; }
+
+.ctt-total-row {
+  margin-top: 2px;
+  padding-top: 4px;
+  border-top: 1px dashed #2d2d44;
+}
+
+.ctt-cost-total {
+  margin-left: auto;
+  color: #fbbf24;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.ctt-turns-row { justify-content: flex-end; }
+
+#ctt-turns { color: #666; font-size: 10px; }
+
+#ctt-response-section .ctt-row span:first-child { color: #93c5fd; }
+#ctt-live-section .ctt-row span:first-child { color: #c4b5fd; }
+
+.ctt-hidden { display: none !important; }

@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Claude Token Tracker",
+  "version": "1.0.0",
+  "description": "Live token counting and cost tracking for claude.ai — see input costs as you type and output costs after each response.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://claude.ai/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://claude.ai/*"],
+      "js": ["tokenizer.js", "content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Claude Token Tracker"
+  },
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
